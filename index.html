@@ -1,0 +1,186 @@
+<!-- 
+  Name: Celine Mehouachi
+  Teacher: Mr. Hardman
+  Course: Web Dev II
+  School: Pembina Trails Collegiate
+  Date Last Modified: 21st April 2026
+-->
+<!--
+a doctype is a declaration that tells the browser which version of html the page is using
+-->
+<!DOCTYPE html>
+<!--
+an html tag is the root element that wraps all other tags on a webpage
+-->
+<html lang="en">
+<head>
+  <!--
+  a meta tag provides information about the page like character encoding or viewport settings
+  -->
+  <meta charset="UTF-8">
+  <!--
+  a viewport meta tag is a setting that controls how a page is displayed on mobile devices
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+  title tags is the text that shows up in the browser tab for the webpage
+  -->
+  <title>Homepage - Treaty 9</title>
+  <!--
+  a link tag is used to connect external files like icons or stylesheets to the html
+  -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!--
+  a stylesheet link is a connection to a css file that contains the design rules for the page
+  -->
+  <link rel="stylesheet" href="Stylesheets/cascading-stylesheet.css">
+</head>
+<body>
+  <!--
+  an anchor tag is a link that can take a user to another page or a different part of the same page
+  -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!--
+  a div is a generic container used to group other elements together for styling or layout
+  -->
+  <div class="container">
+    <!--
+    a header is a structural element used for introductory content at the top of a page
+    -->
+    <header>
+      <!--
+      an img tag is used to embed an image file into a webpage
+      -->
+      <img src="images/treaty-9.png" alt="Treaty 9 Logo" class="logo">
+      <!--
+      a class is an attribute used to identify a group of elements for styling in css
+      -->
+      <div class="header-content">
+        <!--
+        a p tag is a paragraph element used for blocks of plain text
+        -->
+        <p class="header-text">Canadian Indigenous Affairs</p>
+        <!--
+        a nav tag is a special container for navigation links that help users move around the site
+        -->
+        <nav>
+          <!--
+          a ul is an unordered list which is a collection of items that do not have a specific number or order
+          -->
+          <ul class="nav-list">
+            <!--
+            an li is a list item which is a single entry inside a list
+            -->
+            <li><a href="index.html" class="nav-link">Homepage</a></li>
+            <li><a href="history.html" class="nav-link">History</a></li>
+            <li><a href="Treaty-implement-today.html" class="nav-link">Moving Forward</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+    a main tag is a container for the unique and primary content of a webpage
+    -->
+    <main id="main-content">
+      <!--
+      a section is a thematic grouping of content that usually has its own heading
+      -->
+      <section class="hero">
+        <!--
+        an id is a unique attribute used to identify a single specific element on a page
+        -->
+        <p class="eyebrow">Treaty 9 / The James Bay Treaty, 1905–1906</p>
+        <!--
+        an h1 is a level one heading which is the most important title on a page
+        -->
+        <h1 class="hero-title">First Nations Treaty 9</h1>
+        <p class="hero-copy">Treaty 9 is one of the largest and most complex of Canada's numbered treaties, covering Northern Ontario and Northwestern Quebec. At its centre lies a major gap between the written text signed by the Crown and the oral promises made to the Omushkegowuk (Cree), Anishinaabe (Ojibwe), and Anishininimowin (Oji-Cree) nations — a gap that still shapes legal and political relations in Canada today. This site explores the history, the broken promises, and the path toward reconciliation.</p>
+      </section>
+
+      <section class="page-section full-bleed tint">
+        <div class="container">
+          <!--
+          an h2 is a level two heading used for titles of sections within a page
+          -->
+          <h2 class="section-heading">A Treaty Timeline</h2>
+          <ul class="timeline">
+            <li>
+              <!--
+              a span is an inline container used to target small bits of text for styling
+              -->
+              <span class="timeline-year">1905</span>
+              <span class="timeline-event">Negotiations Begin</span>
+              <span class="timeline-desc">Commissioners travel by canoe to remote northern posts to meet Cree and Anishinaabe leaders.</span>
+            </li>
+            <li>
+              <span class="timeline-year">1906</span>
+              <span class="timeline-event">Final Signing</span>
+              <span class="timeline-desc">The treaty is signed at Hudson's Bay Company posts including Osnaburgh House.</span>
+            </li>
+            <li>
+              <span class="timeline-year">1906–1920</span>
+              <span class="timeline-event">Promised Supports Delayed</span>
+              <span class="timeline-desc">Many of the treaty's commitments are delayed or never fully delivered.</span>
+            </li>
+            <li>
+              <span class="timeline-year">1929–1930</span>
+              <span class="timeline-event">Territorial Accessions</span>
+              <span class="timeline-desc">Further land is added to the treaty's coverage, extending it deeper into the north.</span>
+            </li>
+            <li>
+              <span class="timeline-year">Today</span>
+              <span class="timeline-event">A Living Treaty</span>
+              <span class="timeline-desc">Courts and Indigenous nations continue to define what the treaty's promises mean in practice.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <h2 class="section-heading">Why Treaty 9 Matters</h2>
+        <div class="content-grid">
+          <!--
+          an article is a tag for content that can stand on its own as a complete piece of information
+          -->
+          <article class="card">
+            <!--
+            an h3 is a level three heading used for titles inside sections or cards
+            -->
+            <h3>Two Perspectives</h3>
+            <p>For the Crown, Treaty 9 was a tool for transferring sovereignty over a vast territory. For the Indigenous nations who signed it, it represented a pact of peaceful coexistence and land sharing — a disagreement that was never resolved.</p>
+          </article>
+          <article class="card">
+            <h3>Key Topics</h3>
+            <ul>
+              <li>A rushed, pre-written negotiation process</li>
+              <li>Written terms versus oral promises</li>
+              <li>Subsistence rights and the "regulation" clause</li>
+              <li>Ongoing legal recognition of oral histories</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>A Living Treaty</h3>
+            <p>The Nishnawbe Aski Nation continues to assert that sovereignty was never ceded, and Canadian courts increasingly rely on oral histories to define the duty to consult before development on treaty land.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!--
+    a footer is a structural element for content at the bottom of a webpage like links and copyright
+    -->
+    <footer>
+      <ul class="footer-links">
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="Treaty-implement-today.html">Moving Forward</a></li>
+      </ul>
+      <!--
+      an entity is a special code used to display characters like the copyright symbol
+      -->
+      <p>&copy; 2026 Treaty 9 Website. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

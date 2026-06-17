@@ -1,0 +1,626 @@
+/* 
+  External Styling
+  For styling elements consistent 
+  across all pages, for a uniform look and 
+  to make future updates easier. 
+*/
+
+/*
+an import rul is a way to include an external css file or a font from another website
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+
+/*
+the root is a special pseudo-class that targets the highest level element in a document
+*/
+:root {
+  --red: #c21a1a;
+  --sage-green: #67976b;
+  --sage-deep: #3f6147;
+  --off-white: #fff9e6;
+  --tint: #f3ecd6;
+  --text-dark: #2b2b2b;
+  --muted: #5d5d5d;
+  --surface: #ffffff;
+  --ink: #1f2e22;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+}
+
+/*
+the asterisk is a universal selector that targets every single element on a webpage
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+an element selector is a rule that targets all tags of a certain type like html
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+a selector is a part of a css rule that tells the browser which html tags to style
+*/
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: var(--off-white);
+  /* a linear gradient is a smooth transition between two or more colors */
+  background-image: linear-gradient(rgba(255, 249, 230, 0.87), rgba(255, 249, 230, 0.87)), url('../images/james-bay.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+a property is a specific style you want to change like max-width or height
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
+a value is the setting you give to a property like none or inherit
+*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+a pseudo-class is a keyword added to a selector that specifies a special state like hover
+*/
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/*
+a class selector is a way to target specific elements that have a certain class name
+*/
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*
+a declaration is the combination of a property and a value like padding or background
+*/
+.skip-link:focus-visible {
+  left: 20px;
+  top: 20px;
+  width: auto;
+  height: auto;
+  padding: 10px 16px;
+  background: var(--sage-green);
+  color: white;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+/*
+flexbox is a layout model that allows elements to align and distribute space in a container
+*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Changed from center to flex-start to align left */
+  gap: 30px; /* Increased gap for a more spacious feel */
+  padding: 30px 20px; /* Increased top/bottom padding */
+  text-align: left; /* Changed from center to left */
+  flex-wrap: wrap;
+}
+
+/*
+the flex-shrink property determines how much an element will shrink if there is not enough space
+*/
+.logo {
+  width: 100px; /* Increased from 75px to 100px */
+  height: auto;
+  flex-shrink: 0;
+}
+
+/*
+the gap property sets the amount of space between rows and columns in a layout
+*/
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start; /* Changed from center to flex-start to align left */
+}
+
+/*
+the letter-spacing property is used to set the amount of space between characters in text
+*/
+.header-text {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 600;
+  margin: 0;
+}
+
+/*
+the text-transform property can be used to make text all uppercase or all lowercase
+*/
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Changed from center to flex-start to align left */
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/*
+the border-radius property is used to make the corners of an element rounded
+*/
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: var(--sage-green);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+/*
+the transition property allows you to change a style smoothly over a certain time
+*/
+.nav-link:hover,
+.nav-link:focus-visible {
+  background-color: var(--red);
+  text-decoration: none;
+}
+
+/*
+the margin property is used to create space around the outside of an element
+*/
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/*
+the padding property is used to create space inside an element between the content and the border
+*/
+.full-bleed {
+  width: 100%;
+  padding: 40px 0;
+}
+
+/*
+the background-color property is used to set the color of the background of an element
+*/
+.tint {
+  background-color: var(--tint);
+}
+
+/*
+a variable can be used inside a var function to apply a saved style
+*/
+.surface-band {
+  background-color: var(--surface);
+}
+
+/*
+the text-align property is used to set the horizontal alignment of text
+*/
+.hero {
+  padding: 30px 0;
+  text-align: center;
+}
+
+/*
+the font-family property is used to choose which font text should be displayed in
+*/
+.eyebrow {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--sage-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/*
+the line-height property is used to set the amount of space between lines of text
+*/
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/*
+the max-width property is used to set the maximum width an element can reach
+*/
+.hero-copy {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/*
+the display property set to inline-block allows an element to have a width and height while staying in line
+*/
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 25px;
+  background-color: var(--sage-green);
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+/*
+a hover pseudo-class is used to change a style when the mouse is over an element
+*/
+.button:hover,
+.button:focus-visible {
+  background-color: var(--red);
+  text-decoration: none;
+}
+
+/*
+the font-size property is used to set the size of the text
+*/
+.page-section {
+  padding: 35px 0;
+}
+
+.page-section h1 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.page-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*
+the relative position is used to place an element in relation to its normal position
+*/
+.section-heading {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/*
+an after pseudo-element is a way to insert content after an element using css
+*/
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sage-green), var(--red));
+}
+
+/*
+the color property is used to change the color of the text
+*/
+.intro-copy {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/*
+the margin-top property is used to create space above an element
+*/
+.section-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*
+a grid is a layout system that allows you to align elements into rows and columns
+*/
+.content-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/*
+the border property is used to draw a line around the outside of an element
+*/
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid var(--sage-green);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/*
+the box-shadow property is used to add a shadow effect to an element
+*/
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top-color: var(--red);
+}
+
+/*
+the list-style property can be used to change the type of bullet used in a list
+*/
+.card ul {
+  list-style: disc inside;
+  margin-left: 0;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/*
+the border-left property is used to draw a line on the left side of an element
+*/
+.timeline {
+  list-style: none;
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid rgba(103, 151, 107, 0.3);
+}
+
+/*
+the padding-bottom property is used to create space at the bottom inside an element
+*/
+.timeline li {
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+/*
+a before pseudo-element is a way to insert content before an element using css
+*/
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--sage-green);
+  border: 3px solid white;
+}
+
+/*
+an nth-child pseudo-class targets an element based on its position in a group
+*/
+.timeline li:nth-child(even)::before {
+  background: var(--red);
+}
+
+/*
+the grid-template-columns property defines the number and size of columns in a grid
+*/
+.map-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/*
+a media query is a way to apply different styles based on the size of the screen
+*/
+@media (max-width: 760px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+the flex-direction property is used to set the direction of items in a flex container
+*/
+.map-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/*
+the box-shadow property is used here to make the maps look like they are floating
+*/
+.map-image {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*
+the gap property is used to set the amount of space between items in a flex or grid layout
+*/
+.location-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.location-list li {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  border-left: 4px solid var(--sage-green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/*
+the border-collapse property is used to combine table borders into a single line
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/*
+the background property is used here to give the table header a solid color
+*/
+th {
+  background: var(--sage-green);
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/*
+the padding property is used here to add space inside each table cell
+*/
+td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/*
+an nth-child pseudo-class can be used to target even or odd rows in a table
+*/
+tbody tr:nth-child(even) {
+  background: rgba(103, 151, 107, 0.05);
+}
+
+/*
+the border-left property is used here to add a thick line to the side of a quote
+*/
+blockquote {
+  border-left: 4px solid var(--sage-green);
+  padding: 20px 25px;
+  margin: 0 auto;
+  max-width: 700px;
+  background: white;
+  color: var(--muted);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/*
+the aspect-ratio property is used to maintain the shape of an element as it changes size
+*/
+.video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e0e0e0;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*
+the background-color property is used here to give the footer a dark background
+*/
+footer {
+  margin-top: auto;
+  background-color: var(--ink);
+  color: var(--off-white);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/*
+the flex-wrap property allows items in a flex container to move to a new line if needed
+*/
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+/*
+a media query is a block of css that only runs if a certain condition is met like screen width
+*/
+@media (max-width: 600px) {
+  header {
+    padding: 15px;
+  }
+
+  /*
+  the logo size is reset for smaller mobile screens
+  */
+  .logo {
+    width: 65px;
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  /*
+  the width property set to one hundred percent makes an element fill its container
+  */
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
