@@ -6,7 +6,7 @@
 */
 
 /*
-an import rul is a way to include an external css file or a font from another website
+an import rule is a way to include an external css file or a font from another website
 */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
 
@@ -43,7 +43,8 @@ html {
 }
 
 /*
-a selector is a part of a css rule that tells the browser which html tags to style
+a selector is a part of a css rule that tells the browser 
+which html tags to style, also referred to as a psuedo-class If I believe.
 */
 body {
   font-family: Georgia, 'Times New Roman', serif;
